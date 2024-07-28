@@ -14,7 +14,9 @@ const path = require("path");
 
 const app = express();
 
-// app.use(cors());
+// Povolit CORS pro všechny požadavky
+app.use(cors());
+
 app.use(
   cors({
     origin: [
