@@ -14,7 +14,16 @@ const path = require("path");
 
 const app = express();
 
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5180",
+      "https://your-frontend-url-on-heroku.com",
+    ], // Add your Heroku frontend URL here
+    credentials: true,
+  })
+);
 app.options("*", cors());
 app.use(helmet());
 app.use(morgan("dev"));
