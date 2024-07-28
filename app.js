@@ -15,7 +15,7 @@ const path = require("path");
 const app = express();
 
 // Povolit CORS pro všechny požadavky
-app.use(cors());
+// app.use(cors());
 
 app.use(
   cors({
@@ -24,6 +24,7 @@ app.use(
       "https://your-frontend-url-on-heroku.com",
     ], // Add your Heroku frontend URL here
     credentials: true,
+    optionsSuccessStatus: 200,
   })
 );
 app.options("*", cors());
