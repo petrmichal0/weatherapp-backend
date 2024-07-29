@@ -19,7 +19,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5180", // Frontend URL
+    origin: [
+      "http://localhost:5180",
+      "https://my-weatherapp-backend-1a24a5724dcc.herokuapp.com",
+    ],
     credentials: true,
   })
 );
