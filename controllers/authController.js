@@ -82,9 +82,13 @@ exports.isLoggedIn = async (req, res, next) => {
         process.env.JWT_SECRET
       );
 
+      console.log("Token verified, decoded:", decoded);
+
       // 2) Check if user still exists
       const currentUser = await User.findById(decoded.id);
       if (!currentUser) {
+        console.log("User does not exist");
+
         return next();
       }
 
@@ -96,8 +100,12 @@ exports.isLoggedIn = async (req, res, next) => {
       // THERE IS A LOGGED IN USER
       req.user = currentUser;
       res.locals.user = currentUser;
+      console.log("User is logged in:", currentUser.email);
+
       return next();
     } catch (err) {
+      console.log("Error verifying token:", err);
+
       return next();
     }
   }
