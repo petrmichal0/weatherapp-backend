@@ -21,7 +21,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5180",
-      "https://your-frontend-url-on-heroku.com",
+      // "https://your-frontend-url-on-heroku.com",
     ], // Add your Heroku frontend URL here
     credentials: true,
     optionsSuccessStatus: 200,
