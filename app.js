@@ -19,7 +19,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://my-weatherapp-frontend-9e993cefb36f.herokuapp.com/"],
+    origin: ["https://my-weatherapp-frontend-9e993cefb36f.herokuapp.com"],
     credentials: true,
   })
 );
