@@ -25,6 +25,8 @@ const createSendToken = (user, statusCode, req, res) => {
     secure: req.secure || req.headers["x-forwarded-proto"] === "https",
   });
 
+  console.log("Cookie set:", res.cookie);
+
   // Remove password from output
   user.password = undefined;
 
@@ -80,6 +82,8 @@ exports.logout = (req, res) => {
 
 // Only for rendered pages, no errors!
 exports.isLoggedIn = async (req, res, next) => {
+  console.log("Cookies:", req.cookies);
+
   if (req.cookies.jwt) {
     try {
       // 1) verify token
