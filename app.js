@@ -17,12 +17,13 @@ const app = express();
 // Povolit CORS pro všechny požadavky
 // app.use(cors());
 
-app.use(
-  cors({
-    origin: ["https://my-weatherapp-frontend-9e993cefb36f.herokuapp.com"],
-    credentials: true,
-  })
-);
+const corsOptions = {
+  origin: "https://my-weatherapp-frontend-9e993cefb36f.herokuapp.com",
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
 app.options("*", cors());
 app.use(helmet());
 app.use(morgan("dev"));
