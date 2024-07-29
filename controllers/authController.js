@@ -23,7 +23,7 @@ const createSendToken = (user, statusCode, req, res) => {
     ),
     httpOnly: true,
     // secure: req.secure || req.headers["x-forwarded-proto"] === "https",
-    secure: true,
+    secure: process.env.NODE_ENV === "production" ? true : false,
     sameSite: "none", // Important for cross-origin requests
   });
 
