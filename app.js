@@ -15,7 +15,7 @@ const path = require("path");
 const app = express();
 
 // Povolit CORS pro všechny požadavky
-// app.use(cors());
+app.use(cors());
 
 app.use(
   cors({
