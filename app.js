@@ -15,16 +15,12 @@ const path = require("path");
 const app = express();
 
 // Povolit CORS pro všechny požadavky
-app.use(cors());
+// app.use(cors());
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5180",
-      // "https://your-frontend-url-on-heroku.com",
-    ], // Add your Heroku frontend URL here
+    origin: "http://localhost:5180", // Frontend URL
     credentials: true,
-    optionsSuccessStatus: 200,
   })
 );
 app.options("*", cors());
