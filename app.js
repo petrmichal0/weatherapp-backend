@@ -17,12 +17,29 @@ const app = express();
 // Povolit CORS pro všechny požadavky
 // app.use(cors());
 
-const corsOptions = {
-  origin: "https://my-weatherapp-frontend-9e993cefb36f.herokuapp.com",
-  credentials: true,
-};
+app.use(
+  cors({
+    origin: "https://my-weatherapp-frontend-9e993cefb36f.herokuapp.com", // Update this to your frontend URL
+    credentials: true,
+  })
+);
 
-app.use(cors(corsOptions));
+app.use((req, res, next) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://my-weatherapp-frontend-9e993cefb36f.herokuapp.com"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-Requested-With,content-type"
+  );
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  next();
+});
 
 app.options("*", cors());
 app.use(helmet());
