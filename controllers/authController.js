@@ -23,8 +23,10 @@ const createSendToken = (user, statusCode, req, res) => {
     ),
     httpOnly: true,
     // secure: req.secure || req.headers["x-forwarded-proto"] === "https",
-    secure: process.env.NODE_ENV === "production" ? true : false,
-    sameSite: "none", // Important for cross-origin requests
+    // secure: process.env.NODE_ENV === "production" ? true : false,
+    // sameSite: "none", // Important for cross-origin requests
+    secure: process.env.NODE_ENV === "production", // Set to true in production
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // Set to 'none' in production
   });
 
   console.log("Cookie set:", res.cookie);
