@@ -79,6 +79,10 @@ exports.addFavoriteCity = async (req, res) => {
 exports.removeFavoriteCity = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.user.id);
 
+  console.log("User ID:", req.user.id);
+  console.log("Request body:", req.body);
+  console.log("User found:", user);
+
   if (!user) {
     return next(new AppError("No user found with this ID", 404));
   }
