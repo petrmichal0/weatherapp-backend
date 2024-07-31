@@ -141,10 +141,10 @@ exports.forgotPassword = catchAsync(async (req, res, next) => {
 
   // 3) Send it to user's email
   try {
-    // const resetURL = `${req.protocol}://${req.get(
-    //   "host"
-    // )}/resetpassword/${resetToken}`;
-    const resetURL = `https://my-weatherapp-frontend-9e993cefb36f.herokuapp.com/resetpassword/${resetToken}`;
+    const resetURL = `${req.protocol}://${req.get(
+      "host"
+    )}/resetpassword/${resetToken}`;
+    // const resetURL = `https://my-weatherapp-frontend-9e993cefb36f.herokuapp.com/resetpassword/${resetToken}`;
 
     await new Email(user, resetURL).sendPasswordReset();
 
