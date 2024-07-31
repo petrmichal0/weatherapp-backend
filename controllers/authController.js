@@ -22,10 +22,10 @@ const createSendToken = (user, statusCode, req, res) => {
       Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
     ),
     httpOnly: true,
-    // secure: req.secure || req.headers["x-forwarded-proto"] === "https",
+    secure: req.secure || req.headers["x-forwarded-proto"] === "https",
     // secure: process.env.NODE_ENV === "production" ? true : false,
     // sameSite: "none", // Important for cross-origin requests
-    secure: process.env.NODE_ENV === "production", // Set to true in production
+
     sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // Set to 'none' in production
   });
 
