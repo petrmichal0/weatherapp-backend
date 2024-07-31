@@ -51,7 +51,11 @@ exports.signup = catchAsync(async (req, res, next) => {
     passwordConfirm: req.body.passwordConfirm,
   });
 
-  createSendToken(newUser, 201, req, res);
+  const { email } = req.body;
+  const user = await User.findOne({ email });
+
+  // createSendToken(newUser, 201, req, res);
+  createSendToken(user, 201, req, res);
 });
 
 exports.login = catchAsync(async (req, res, next) => {
