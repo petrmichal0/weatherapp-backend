@@ -122,10 +122,6 @@ npm start
 ```
 This command will run the application with `NODE_ENV=production`. The server will run on the specified port (default is `3000`). You can access the API endpoints through [http://localhost:3000](http://localhost:3000).
 
-### Accessing the API
-
-After starting the application, whether in development or production mode, the backend will be running on the specified port. You can interact with the API through various endpoints that handle user authentication, weather data retrieval, and more.
-
 ## Backend Information
 
 The backend for this project is hosted at the following URL:
