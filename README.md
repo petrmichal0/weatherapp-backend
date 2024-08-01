@@ -140,7 +140,7 @@ You can access and interact with the weather application directly through this l
 
 **Frontend Repository:** [https://github.com/petrmichal0/weatherapp-frontend](https://github.com/petrmichal0/weatherapp-frontend?tab=readme-ov-file#backend-information)
 
-# API Endpoints
+## API Endpoints
 
 <table>
   <tr>
