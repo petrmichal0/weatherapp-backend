@@ -126,18 +126,112 @@ This command will run the application with `NODE_ENV=production`. The server wil
 
 The backend for this project is hosted at the following URL:
 
-- **Backend API:** https://my-weatherapp-backend-1a24a5724dcc.herokuapp.com/
+**Backend API:** https://my-weatherapp-backend-1a24a5724dcc.herokuapp.com/
 
-The source code for the backend is available on GitHub:
+The API endpoints and detailed documentation on how to interact with the backend are provided in this README.
 
-- **Backend Repository:** [https://github.com/petrmichal0/weatherapp-backend](https://github.com/petrmichal0/weatherapp-backend)
+## Frontend Information
 
-All API endpoints and detailed documentation on how to interact with the backend are provided in the backend repository. If you want to see the available API requests and how to use them, please visit the backend repository's README or relevant documentation files for more context.
+The frontend for this project is hosted at the following URL:
 
+**Frontend Application:** https://my-weatherapp-frontend-9e993cefb36f.herokuapp.com/
+
+You can access and interact with the weather application directly through this link. The frontend is designed to work seamlessly with the backend API to provide weather data and user-specific features.
+
+**Frontend Repository:** [https://github.com/petrmichal0/weatherapp-frontend](https://github.com/petrmichal0/weatherapp-frontend?tab=readme-ov-file#backend-information)
 
 ## API Endpoints
 
-
+<table>
+  <tr>
+    <th style="background-color:#d6eaf8; color:#000000;">HTTP Method</th>
+    <th style="background-color:#d6eaf8; color:#000000;">Endpoint</th>
+    <th style="background-color:#d6eaf8; color:#000000;">Description</th>
+    <th style="background-color:#d6eaf8; color:#000000;">Request Example</th>
+    <th style="background-color:#d6eaf8; color:#000000;">Response Example</th>
+    <th style="background-color:#d6eaf8; color:#000000;">Authorization Required</th>
+  </tr>
+  <tr>
+    <td>POST</td>
+    <td>/api/v1/user/signup</td>
+    <td>Sign up a new user</td>
+    <td>{ "name": "John Doe", "email": "john@example.com", "password": "password123", "passwordConfirm": "password123" }</td>
+    <td>{ "status": "success", "token": "jwt-token", "data": { "user": { "name": "John Doe", "email": "john@example.com", "favorites": [] } } }</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>POST</td>
+    <td>/api/v1/user/login</td>
+    <td>Log in an existing user</td>
+    <td>{ "email": "john@example.com", "password": "password123" }</td>
+    <td>{ "status": "success", "token": "jwt-token", "data": { "user": { "name": "John Doe", "email": "john@example.com", "favorites": [] } } }</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>GET</td>
+    <td>/api/v1/user/logout</td>
+    <td>Log out the current user</td>
+    <td>None</td>
+    <td>{ "status": "success" }</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>POST</td>
+    <td>/api/v1/user/forgotPassword</td>
+    <td>Request a password reset</td>
+    <td>{ "email": "john@example.com" }</td>
+    <td>{ "status": "success", "message": "Token sent to email!" }</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>PATCH</td>
+    <td>/api/v1/user/resetPassword/:token</td>
+    <td>Reset the user's password using a token</td>
+    <td>{ "password": "newPassword123", "passwordConfirm": "newPassword123" }</td>
+    <td>{ "status": "success", "token": "jwt-token", "data": { "user": { "name": "John Doe", "email": "john@example.com", "favorites": [] } } }</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>GET</td>
+    <td>/api/v1/user/currentUser</td>
+    <td>Get the currently logged-in user</td>
+    <td>None</td>
+    <td>{ "status": "success", "data": { "user": { "name": "John Doe", "email": "john@example.com", "favorites": [] } } }</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>POST</td>
+    <td>/api/v1/user/favorites</td>
+    <td>Add a favorite city to the user's profile</td>
+    <td>{ "cityName": "Prague", "country": "Czech Republic" }</td>
+    <td>{ "status": "success", "data": { "user": { "favorites": [ { "cityName": "Prague", "country": "Czech Republic" } ] } } }</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>DELETE</td>
+    <td>/api/v1/user/favorites</td>
+    <td>Remove a favorite city from the user's profile</td>
+    <td>{ "cityName": "Prague", "country": "Czech Republic" }</td>
+    <td>{ "status": "success", "data": { "user": { "favorites": [] } } }</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>GET</td>
+    <td>/api/v1/weather/forecast</td>
+    <td>Get weather forecast for a specific city</td>
+    <td>/api/v1/weather/forecast?cityName=Prague&days=5</td>
+    <td>{ "status": "success", "data": { "location": { "name": "Prague" }, "forecast": { "forecastday": [ { "day": { "maxtemp_c": 20.0, "mintemp_c": 10.0, "condition": { "text": "Sunny" } } } ] } } }</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>GET</td>
+    <td>/api/v1/weather/locations</td>
+    <td>Search for locations based on city name</td>
+    <td>/api/v1/weather/locations?cityName=Prague</td>
+    <td>{ "status": "success", "data": [ { "id": 123, "name": "Prague", "region": "", "country": "Czech Republic" } ] }</td>
+    <td>No</td>
+  </tr>
+</table>
 
 ## Project Structure
 
