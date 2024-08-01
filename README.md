@@ -126,10 +126,22 @@ This command will run the application with `NODE_ENV=production`. The server wil
 
 After starting the application, whether in development or production mode, the backend will be running on the specified port. You can interact with the API through various endpoints that handle user authentication, weather data retrieval, and more.
 
+## Backend Information
+
+The backend for this project is hosted at the following URL:
+
+- **Backend API:** https://my-weatherapp-backend-1a24a5724dcc.herokuapp.com/
+
+The source code for the backend is available on GitHub:
+
+- **Backend Repository:** [https://github.com/petrmichal0/weatherapp-backend](https://github.com/petrmichal0/weatherapp-backend)
+
+All API endpoints and detailed documentation on how to interact with the backend are provided in the backend repository. If you want to see the available API requests and how to use them, please visit the backend repository's README or relevant documentation files for more context.
+
 
 ## API Endpoints
 
-The backend provides various API endpoints for user authentication and weather data. For detailed information on each endpoint, please refer to the API documentation in the `routes` folder or visit the [WeatherApp Frontend Repository](https://github.com/petrmichal0/weatherapp-frontend) for more context.
+
 
 ## Project Structure
 
