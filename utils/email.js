@@ -10,12 +10,12 @@ module.exports = class Email {
 
   newTransport() {
     return nodemailer.createTransport({
-      host: "smtp.seznam.cz",
-      port: 465,
+      host: process.env.EMAIL_HOST,
+      port: process.env.EMAIL_PORT,
       secure: true, // Použití TLS
       auth: {
-        user: process.env.EMAIL_FROM_SEZNAM,
-        pass: process.env.EMAIL_PASSWORD_SEZNAM,
+        user: process.env.EMAIL_FROM,
+        pass: process.env.EMAIL_PASSWORD,
       },
     });
   }
