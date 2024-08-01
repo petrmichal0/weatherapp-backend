@@ -21,7 +21,6 @@ WeatherApp Backend is the server-side application that provides API endpoints fo
 - User authentication (signup, login, password reset)
 - Secure API endpoints for weather data
 - Error handling and logging
-- Data validation and sanitization
 
 ## Installation
 
