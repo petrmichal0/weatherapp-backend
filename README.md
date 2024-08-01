@@ -67,6 +67,8 @@ To run this application, you'll need to set up several environment variables. Th
     # Email service configuration
     EMAIL_FROM=your_email@example.com
     EMAIL_PASSWORD=your_email_password
+    EMAIL_HOST=smtp.your-email-provider.com
+    EMAIL_PORT=your_email_provider_port
 
     # JWT configuration for authentication
     JWT_SECRET=your_jwt_secret
@@ -82,7 +84,11 @@ To run this application, you'll need to set up several environment variables. Th
      Sign up for MongoDB Atlas or use a local MongoDB instance. Replace `<USERNAME>`, `<PASSWORD>`, and `<YOUR_CLUSTER>` with your MongoDB credentials and cluster information.
 
    - **Email Service Configuration:**  
-     You need an SMTP server to send emails. You can use services like Gmail, SendGrid, or another provider. Replace `your_email@example.com` and `your_email_password` with your email credentials. Be aware of security and best practices when handling email credentials.
+     You need an SMTP server to send emails. Different email providers have different configurations. For example:
+     - For Gmail: use `smtp.gmail.com` as the host and `587` as the port.
+     - For Seznam.cz: use `smtp.seznam.cz` as the host and `465` as the port (as shown in your example).
+     Replace `EMAIL_HOST` and `EMAIL_PORT` in your `.env` file with the appropriate values based on your email service provider.
+     Be aware of security and best practices when handling email credentials.
 
    - **JWT Secret:**  
      Generate a strong secret key that will be used to sign and verify JSON Web Tokens (JWTs) for authentication.
