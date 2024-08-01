@@ -139,12 +139,12 @@ All API endpoints and detailed documentation on how to interact with the backend
 
 <table>
   <tr>
-    <th style="background-color:#ffcccb; color:#000000;">HTTP Method</th>
-    <th style="background-color:#ffcccb; color:#000000;">Endpoint</th>
-    <th style="background-color:#ffcccb; color:#000000;">Description</th>
-    <th style="background-color:#ffcccb; color:#000000;">Request Example</th>
-    <th style="background-color:#ffcccb; color:#000000;">Response Example</th>
-    <th style="background-color:#ffcccb; color:#000000;">Authorization Required</th>
+    <th style="background-color:#d6eaf8; color:#000000;">HTTP Method</th>
+    <th style="background-color:#d6eaf8; color:#000000;">Endpoint</th>
+    <th style="background-color:#d6eaf8; color:#000000;">Description</th>
+    <th style="background-color:#d6eaf8; color:#000000;">Request Example</th>
+    <th style="background-color:#d6eaf8; color:#000000;">Response Example</th>
+    <th style="background-color:#d6eaf8; color:#000000;">Authorization Required</th>
   </tr>
   <tr>
     <td>POST</td>
