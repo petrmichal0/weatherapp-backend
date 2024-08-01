@@ -126,14 +126,19 @@ This command will run the application with `NODE_ENV=production`. The server wil
 
 The backend for this project is hosted at the following URL:
 
-- **Backend API:** https://my-weatherapp-backend-1a24a5724dcc.herokuapp.com/
+**Backend API:** https://my-weatherapp-backend-1a24a5724dcc.herokuapp.com/
 
-The source code for the backend is available on GitHub:
+The API endpoints and detailed documentation on how to interact with the backend are provided in this README.
 
-- **Backend Repository:** [https://github.com/petrmichal0/weatherapp-backend](https://github.com/petrmichal0/weatherapp-backend)
+## Frontend Information
 
-All API endpoints and detailed documentation on how to interact with the backend are provided in the backend repository. If you want to see the available API requests and how to use them, please visit the backend repository's README or relevant documentation files for more context.
+The frontend for this project is hosted at the following URL:
 
+**Frontend Application:** https://my-weatherapp-frontend-9e993cefb36f.herokuapp.com/
+
+You can access and interact with the weather application directly through this link. The frontend is designed to work seamlessly with the backend API to provide weather data and user-specific features.
+
+**Frontend Repository:** [https://github.com/petrmichal0/weatherapp-frontend](https://github.com/petrmichal0/weatherapp-frontend?tab=readme-ov-file#backend-information)
 
 # API Endpoints
 
