@@ -4,7 +4,7 @@
 WeatherApp Backend is the server-side application that provides API endpoints for the WeatherApp frontend. It handles user authentication, weather data retrieval, and various other backend functionalities.
 
 ## Badges
-![Static Badge](https://img.shields.io/badge/status-in_progress-yellow)
+![Static Badge](https://img.shields.io/badge/status-online-brightgreen)
 
 ## Table of Content
 - [Project Title and Description](#project-title-and-description)
@@ -46,15 +46,55 @@ WeatherApp Backend is the server-side application that provides API endpoints fo
     npm install
     ```
 
-4. Set up environment variables:
-    Create a `.env` file in the root directory and add your environment variables. Example:
+### Set up Environment Variables
+
+To run this application, you'll need to set up several environment variables. These variables are critical for connecting to external services like your MongoDB database, sending emails, and authenticating users. Follow these steps:
+
+1. **Create a `.env` file:**  
+   In the root directory of your project, create a file named `.env` where you will store these variables.
+
+2. **Define the required environment variables:**  
+   Add the following variables to your `.env` file. You will need to replace placeholder values with your actual credentials.
+
     ```env
     NODE_ENV=development
     PORT=3000
-    DATABASE=mongodb://localhost:27017/weatherapp
+
+    # Database connection string
+    DATABASE=mongodb+srv://<USERNAME>:<PASSWORD>@<YOUR_CLUSTER>.mongodb.net/weatherapp?retryWrites=true&w=majority
+    DATABASE_PASSWORD=your_database_password
+
+    # Email service configuration
+    EMAIL_FROM=your_email@example.com
+    EMAIL_PASSWORD=your_email_password
+
+    # JWT configuration for authentication
     JWT_SECRET=your_jwt_secret
+    JWT_COOKIE_EXPIRES_IN=90
     JWT_EXPIRES_IN=90d
+
+    # API keys
+    WEATHER_API_KEY=your_weather_api_key
     ```
+
+3. **Obtain necessary credentials and API keys:**
+   - **MongoDB Connection String:**  
+     Sign up for MongoDB Atlas or use a local MongoDB instance. Replace `<USERNAME>`, `<PASSWORD>`, and `<YOUR_CLUSTER>` with your MongoDB credentials and cluster information.
+
+   - **Email Service Configuration:**  
+     You need an SMTP server to send emails. You can use services like Gmail, SendGrid, or another provider. Replace `your_email@example.com` and `your_email_password` with your email credentials. Be aware of security and best practices when handling email credentials.
+
+   - **JWT Secret:**  
+     Generate a strong secret key that will be used to sign and verify JSON Web Tokens (JWTs) for authentication.
+
+   - **Weather API Key:**  
+     Sign up for a weather data provider service like [weatherapi.com](https://www.weatherapi.com/) and obtain an API key. This key will be used to fetch weather data in your application.
+
+4. **Secure your environment variables:**
+   - Make sure that your `.env` file is included in your `.gitignore` file to prevent it from being pushed to a public repository. This ensures your sensitive credentials remain secure.
+
+By following these steps, you ensure that your application has access to all the necessary configuration details to connect to external services and operate correctly.
+
 ## Usage
 
 ### Running in Development Mode
