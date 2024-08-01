@@ -93,3 +93,23 @@ WeatherApp-Backend/
 ├── package-lock.json
 ├── package.json
 ├── server.js
+```
+
+## Technologies Used
+
+[![Node.js Badge](https://img.shields.io/badge/-Node.js-43853D?style=for-the-badge&labelColor=black&logo=node.js&logoColor=43853D)](#)
+[![Express Badge](https://img.shields.io/badge/-Express-000000?style=for-the-badge&labelColor=white&logo=express&logoColor=000000)](#)
+[![MongoDB Badge](https://img.shields.io/badge/-MongoDB-4DB33D?style=for-the-badge&labelColor=white&logo=mongodb&logoColor=4DB33D)](#)
+
+## Third-Party Libraries
+
+* Mongoose
+* JWT (JSON Web Tokens)
+* bcryptjs
+* Express
+* dotenv
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
