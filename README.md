@@ -6,6 +6,9 @@ WeatherApp Backend is the server-side application that provides API endpoints fo
 ## Badges
 ![Static Badge](https://img.shields.io/badge/status-online-brightgreen)
 
+## Quick Look
+<img src="https://github.com/user-attachments/assets/dec7723e-eb8e-4c78-92ab-25e2dd13fcf5" width="300" alt="WeatherApp Backend">
+
 ## Table of Content
 - [Project Title and Description](#project-title-and-description)
 - [Features](#features)
