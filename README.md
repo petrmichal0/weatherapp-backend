@@ -265,8 +265,8 @@ WeatherApp-Backend/
 ## Technologies Used
 
 [![Node.js Badge](https://img.shields.io/badge/-Node.js-43853D?style=for-the-badge&labelColor=black&logo=node.js&logoColor=43853D)](#)
-[![Express Badge](https://img.shields.io/badge/-Express-000000?style=for-the-badge&labelColor=white&logo=express&logoColor="white")](#)
-[![MongoDB Badge](https://img.shields.io/badge/-MongoDB-000000?style=for-the-badge&labelColor=white&logo=mongodb&logoColor=4DB33D)](#)
+[![Express Badge](https://img.shields.io/badge/-Express-000000?style=for-the-badge&labelColor=black&logo=express&logoColor=white)](#)
+[![MongoDB Badge](https://img.shields.io/badge/-MongoDB-4DB33D?style=for-the-badge&labelColor=black&logo=mongodb&logoColor=4DB33D)](#)
 
 ## Third-Party Libraries
 
