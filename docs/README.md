@@ -1,9 +1,11 @@
-
 ## Project Title and Description
 WeatherApp Backend is the server-side application that provides API endpoints for the WeatherApp frontend. It handles user authentication, weather data retrieval, and various other backend functionalities.
 
 ## Badges
 ![Static Badge](https://img.shields.io/badge/status-online-brightgreen)
+
+## Quick Look
+<img src="https://github.com/user-attachments/assets/dec7723e-eb8e-4c78-92ab-25e2dd13fcf5" width="300" alt="WeatherApp Backend">
 
 ## Table of Content
 - [Project Title and Description](#project-title-and-description)
@@ -261,29 +263,28 @@ WeatherApp-Backend/
 ## Technologies Used
 
 [![Node.js Badge](https://img.shields.io/badge/-Node.js-43853D?style=for-the-badge&labelColor=black&logo=node.js&logoColor=43853D)](#)
-[![Express Badge](https://img.shields.io/badge/-Express-000000?style=for-the-badge&labelColor=white&logo=express&logoColor=000000)](#)
-[![MongoDB Badge](https://img.shields.io/badge/-MongoDB-4DB33D?style=for-the-badge&labelColor=white&logo=mongodb&logoColor=4DB33D)](#)
+[![Express Badge](https://img.shields.io/badge/-Express-000000?style=for-the-badge&labelColor=black&logo=express&logoColor=white)](#)
+[![MongoDB Badge](https://img.shields.io/badge/-MongoDB-4DB33D?style=for-the-badge&labelColor=black&logo=mongodb&logoColor=4DB33D)](#)
 
 ## Third-Party Libraries
 
-* **axios** - A promise-based HTTP client for making requests to external APIs.
-* **bcryptjs** - A library for hashing passwords.
-* **cookie-parser** - Middleware for parsing cookies from HTTP requests.
-* **cors** - Middleware for enabling Cross-Origin Resource Sharing (CORS) in your application.
-* **crypto** - A built-in module for cryptographic functions in Node.js.
-* **dotenv** - A module for loading environment variables from a `.env` file into `process.env`.
-* **express** - A web framework for building RESTful APIs and web applications in Node.js.
-* **express-mongo-sanitize** - A middleware to sanitize user-supplied data to prevent NoSQL injection attacks.
-* **express-rate-limit** - Middleware for limiting repeated requests to APIs to prevent abuse.
-* **helmet** - Middleware for securing Express apps by setting various HTTP headers.
-* **hpp** - Middleware to protect against HTTP Parameter Pollution attacks.
-* **jsonwebtoken** - An implementation of JSON Web Tokens (JWT) for authentication and authorization.
-* **mongoose** - A MongoDB object modeling tool designed to work in an asynchronous environment.
-* **morgan** - HTTP request logger middleware for logging incoming requests.
-* **nodemailer** - A module for sending emails from Node.js applications.
-* **xss-clean** - Middleware to sanitize user input and protect against cross-site scripting (XSS) attacks.
-* **nodemon** (devDependency) - A tool that automatically restarts the Node.js server when file changes are detected during development.
+* **axios**: A promise-based HTTP client for making requests to external APIs.
+* **bcryptjs**:  A library for hashing passwords.
+* **cookie-parser**:  Middleware for parsing cookies from HTTP requests.
+* **cors**:  Middleware for enabling Cross-Origin Resource Sharing (CORS) in your application.
+* **crypto**:  A built-in module for cryptographic functions in Node.js.
+* **dotenv**:  A module for loading environment variables from a `.env` file into `process.env`.
+* **express-mongo-sanitize**:  A middleware to sanitize user-supplied data to prevent NoSQL injection attacks.
+* **express-rate-limit**:  Middleware for limiting repeated requests to APIs to prevent abuse.
+* **helmet**:  Middleware for securing Express apps by setting various HTTP headers.
+* **hpp**:  Middleware to protect against HTTP Parameter Pollution attacks.
+* **jsonwebtoken**:  An implementation of JSON Web Tokens (JWT) for authentication and authorization.
+* **morgan**:  HTTP request logger middleware for logging incoming requests.
+* **nodemailer**:  A module for sending emails from Node.js applications.
+* **xss-clean**:  Middleware to sanitize user input and protect against cross-site scripting (XSS) attacks.
+* **nodemon** (devDependency):  A tool that automatically restarts the Node.js server when file changes are detected during development.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the LICENSE file for details.
+
