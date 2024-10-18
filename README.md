@@ -270,25 +270,23 @@ WeatherApp-Backend/
 
 ## Third-Party Libraries
 
-* **axios** - A promise-based HTTP client for making requests to external APIs.
-* **bcryptjs** - A library for hashing passwords.
-* **cookie-parser** - Middleware for parsing cookies from HTTP requests.
-* **cors** - Middleware for enabling Cross-Origin Resource Sharing (CORS) in your application.
-* **crypto** - A built-in module for cryptographic functions in Node.js.
-* **dotenv** - A module for loading environment variables from a `.env` file into `process.env`.
-* **express** - A web framework for building RESTful APIs and web applications in Node.js.
-* **express-mongo-sanitize** - A middleware to sanitize user-supplied data to prevent NoSQL injection attacks.
-* **express-rate-limit** - Middleware for limiting repeated requests to APIs to prevent abuse.
-* **helmet** - Middleware for securing Express apps by setting various HTTP headers.
-* **hpp** - Middleware to protect against HTTP Parameter Pollution attacks.
-* **jsonwebtoken** - An implementation of JSON Web Tokens (JWT) for authentication and authorization.
-* **mongoose** - A MongoDB object modeling tool designed to work in an asynchronous environment.
-* **morgan** - HTTP request logger middleware for logging incoming requests.
-* **nodemailer** - A module for sending emails from Node.js applications.
-* **xss-clean** - Middleware to sanitize user input and protect against cross-site scripting (XSS) attacks.
-* **nodemon** (devDependency) - A tool that automatically restarts the Node.js server when file changes are detected during development.
+* **axios**: A promise-based HTTP client for making requests to external APIs.
+* **bcryptjs**:  A library for hashing passwords.
+* **cookie-parser**:  Middleware for parsing cookies from HTTP requests.
+* **cors**:  Middleware for enabling Cross-Origin Resource Sharing (CORS) in your application.
+* **crypto**:  A built-in module for cryptographic functions in Node.js.
+* **dotenv**:  A module for loading environment variables from a `.env` file into `process.env`.
+* **express-mongo-sanitize**:  A middleware to sanitize user-supplied data to prevent NoSQL injection attacks.
+* **express-rate-limit**:  Middleware for limiting repeated requests to APIs to prevent abuse.
+* **helmet**:  Middleware for securing Express apps by setting various HTTP headers.
+* **hpp**:  Middleware to protect against HTTP Parameter Pollution attacks.
+* **jsonwebtoken**:  An implementation of JSON Web Tokens (JWT) for authentication and authorization.
+* **morgan**:  HTTP request logger middleware for logging incoming requests.
+* **nodemailer**:  A module for sending emails from Node.js applications.
+* **xss-clean**:  Middleware to sanitize user input and protect against cross-site scripting (XSS) attacks.
+* **nodemon** (devDependency):  A tool that automatically restarts the Node.js server when file changes are detected during development.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the LICENSE file for details.
 
