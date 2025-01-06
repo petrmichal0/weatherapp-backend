@@ -51,14 +51,14 @@ WeatherApp Backend is the server-side application that provides API endpoints fo
 
 To run this application, you'll need to set up several environment variables. These variables are critical for connecting to external services like your MongoDB database, sending emails, and authenticating users. Follow these steps:
 
-1. **Create a `.env` file:**  
-   In the root directory of your project, create a file named `.env` where you will store these variables.
+1. **Create a `config.env` file:**  
+   In the root directory of your project, create a file named `config.env` where you will store these variables.
 
 2. **Define the required environment variables:**  
-   Add the following variables to your `.env` file. You will need to replace placeholder values with your actual credentials.
+   Add the following variables to your `config.env` file. You will need to replace placeholder values with your actual credentials.
 
     ```env
-    NODE_ENV=development
+    NODE_ENV=production
     PORT=3000
 
     # Database connection string
